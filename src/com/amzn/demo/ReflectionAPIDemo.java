@@ -77,9 +77,10 @@ public class ReflectionAPIDemo {
 							Arrays.toString(method.getParameters()), method.getReturnType() );
 			System.out.println(str);
 			
+			// Invoke the method (with any access type - public,private,default or protected.
 			if(method.getName().equals("method2")) {
 				method.setAccessible(true);// method2 will be public temporarily
-				String result = (String) method.invoke(class1.newInstance(), new Integer(25));
+				String result = (String) method.invoke(class1.newInstance(), 25);
 				System.out.println("result="+result);
 			}
 		};
@@ -100,14 +101,15 @@ public class ReflectionAPIDemo {
 		
 		//System.out.println(myClass1.method2(5)); // won't compile because method2 is private
 		
-		// Invoking methods (applicable to private methods also) - approach 2
+		// Invoking methods (applicable to private methods also) 
+		// approach 2 - by getting a direct reference to the particular method.
 		Method method2Ref = class1.getDeclaredMethod("method3", int.class, float.class, String.class );
 		method2Ref.setAccessible(true); // relax the private access restriction
 		String result = (String) method2Ref.invoke(class1.newInstance(), 25, 3.25f, "World");
 		System.out.println("approach 2 result="+result);
 		
 		
-		// Accessing private member variable and changing thier value;
+		// Accessing private member variable and changing their value;
 		System.out.println("myClass1 age before ="+myClass1.getAge());
 		
 		Field ageFeild = class1.getDeclaredField("age");
