@@ -15,11 +15,10 @@ public class FarmerMain {
 		// Because Farmer 2 arg constructor is throwing 
 		// checked exception UnsuitableFarmerAgeException
 		mainWholeSaler(args);
-		//
 	}
 
 	public static void mainWholeSaler(String[] args) {
-		//System.out.println("Inside mainWholeSaler");
+		System.out.println("Inside mainWholeSaler");
 		Wholesaler wholesaler1 = new Wholesaler("Pradeep",987654321,"pradeep@some.com");
 		
 		System.out.println(wholesaler1.getYearOfLicense() );

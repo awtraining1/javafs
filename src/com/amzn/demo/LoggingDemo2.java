@@ -16,8 +16,8 @@ public class LoggingDemo2 {
 	static Logger logger = Logger.getLogger("Test Logger");
 
 	public static void main(String[] args) {
-		logger.setLevel(Level.ALL);
-		logger.info("Hello Hello");	// logged in mygoodlogger%u.log file as per the props file.
+		logger.setLevel(Level.INFO);
+		logger.info("QWERTY");	// logged in mygoodlogger%u.txt file as per the props file.
 		
 		logger.finest("Hello Finest 2");
 		logger.fine("Hello Fine 2");

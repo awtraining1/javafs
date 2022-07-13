@@ -16,16 +16,17 @@ public class LoggingDemo {
 
 	public static void main(String[] args) throws SecurityException, IOException {
 		System.out.println("Current log level: " + logger.getLevel());
-		logger.setLevel(Level.CONFIG);
+		logger.setLevel(Level.INFO);
 
 		// Redirect all logs to a file
 		FileHandler fileLogger = new FileHandler("mylogs.log");
+		fileLogger.setFormatter(new SimpleFormatter());
 		logger.addHandler(fileLogger);
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 2; i++) {
 			logger.info("Inside for loop i=" + i); // use this for informational message
-			// logger.warning("Inside for loop i="+i);// use this for warning messages
-			// logger.severe("Inside for loop i="+i);// use when some error conditionals
+			logger.warning("Inside for loop i="+i);// use this for warning messages
+			logger.severe("Inside for loop i="+i);// use when some error conditionals
 			logger.finest("Inside for loop i=" + i);
 			logger.config("Inside for loop i=" + i);
 		}
