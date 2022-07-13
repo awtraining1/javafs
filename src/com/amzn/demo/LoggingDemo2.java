@@ -19,7 +19,9 @@ public class LoggingDemo2 {
 		logger.setLevel(Level.ALL);
 		logger.info("Hello Hello");	// logged in mygoodlogger%u.log file as per the props file.
 		
-		logger.finest("Hello Hello 2");
+		logger.finest("Hello Finest 2");
+		logger.fine("Hello Fine 2");
+		
 	}
 
 }
