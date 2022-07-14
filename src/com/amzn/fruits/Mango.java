@@ -1,7 +1,11 @@
 package com.amzn.fruits;
 
+import com.amzn.annotations.Aromatic;
+import com.amzn.annotations.Raw;
 import com.amzn.fruits.interfaces.IFruit;
 
+@Aromatic
+@Raw
 public class Mango implements IFruit{
 	public String name;
 	private  String color;
