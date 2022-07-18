@@ -1,0 +1,12 @@
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+INFO: Inside for loop i=0
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+WARNING: Inside for loop i=0
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+SEVERE: Inside for loop i=0
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+INFO: Inside for loop i=1
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+WARNING: Inside for loop i=1
+Jul 13, 2022 2:33:22 PM com.amzn.demo.LoggingDemo main
+SEVERE: Inside for loop i=1

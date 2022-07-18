@@ -1,0 +1,145 @@
+5A Abstract the WholeSaler class to the maximum possible extent
+
+5B
+Which attributes will you make as public?
+Which as private, protected and default? Why?
+
+6A Create and Demo an array of String (Aditya)
+6B Create and Demo an array of Farmer (Aarti)
+6C Create an array of Farmer 
+Loop through the array and print only those 
+farmers name whose age is > 40,
+
+6D QQQQQQQ
+Do you see any similarities in Farmer and WholeSaler classes?
+If yes, what comes to your mind in terms of OOPs concepts that you can apply
+to both?
+Refactor your code to implement that OOP concept(inheritance)
+
+7A
+Develop an Apple class that implements Fruit interface
+
+ASSIGNMENT-7B
+Think of one more interface that you can have in the project
+Code it (add method decls)
+
+ASSIGNMENT-7C
+Think of a class that is both a vegetable and a fruit
+Code it 
+
+ASSIGNMENT-8A
+Start with a new Java Project
+Create one class with main method 
+Pick up any industry or domain
+Create one interface that you can think of
+Create 3-4 classes such that 3 of them implements the above interface
+and the remaining one extends some other class.
+
+In the class with main method ,
+create an array of <n> objects of one particular class. 
+Reference type should be of the interface or super class.
+
+Finally display the array, only those which match some criteria 
+(like age<40 color is red or name starts with "P" ... )
+
+<n> - take it from command line arg list
+Example java MainClassName 5
+
+HOW TO COMPILE Eclipse project on cmd terminal
+FIRST cd to your <project_folder>\src
+TO COMPILE
+javac -d classes com/amzn/app/*.java com/amzn/demo/*.java com/amzn/fruits/*.java com/amzn/fruit_and_veg/*.java com/amzn/fruits/exotic/*.java com/amzn/fruits/interfaces/*.java  com/amzn/people/*.java
+TO EXECUTE a main class CmdLineArgsDemo in package com.amzn.demo
+java -cp classes com.amzn.demo.CmdLineArgsDemo 5 
+
+
+ASSIGNMENT-9A
+Given a sentence, print it in sentence case.
+GIVEN peacock Is a biRd
+OUTPUT Peacock is a bird
+
+9B
+How will you generate random numbers between 1 to 9? 
+
+10A Implement equals for Tomato class. 
+Tomatoes are equals if they have same color and weight.
+
+10B In your project you  have a try block that throws Exceptions of the type
+ExceptionA, ExceptionB, ExceptionC and ExceptionD.
+ExceptionB is a subclass of ExceptionA
+ExceptionD is a subclass of ExceptionA
+How will your try catch blocks look like
+
+try{
+
+}
+
+11A Try the scenario with a File object.
+File f = new File("a.txt");
+f.delete();
+
+What does your compiler suggest you wrt exceptions?
+Satisfy the compiler and make your project compile
+
+11B Design and Implement your own Exception class, which will be used
+in the Farmer class's 2 arg constructor to prevent Farmer creation
+if name is less than 3 chars
+
+11C Design and Implement the follwing
+Enhance Farmer class  with userId and password feilds.
+Login class - has a static method loginFarmer(Farmer farmr) 
+LoginException your own Exception class to throw when login fails.
+
+12A 
+Create a Test Class
+Create x number of Farmers in a loop, where x is taken from user(Scanner class)
+Verify that the collection has x Farmers (which method will you use?)
+SOLN
+int x;
+	
+	int age;
+	String name;
+	
+		
+	System.out.println("how many farmers");	
+	Scanner sc=new Scanner(System.in);
+	x=sc.nextInt();
+	
+	List<Farmer> fl=new LinkedList<Farmer>();
+	
+	
+	for(int i=0;i<x;i++)
+	{
+		
+		//fl.add(new Farmer("Lokesh1", (short) -1));
+		
+
+		System.out.println("Enter name");	
+		name=sc.next();
+		
+		System.out.println("Enter age");	
+		age=sc.nextInt();
+		
+		fl.add(new Farmer(name,(short)age));
+		
+		
+		
+	}
+ll
+12B Sort farmers based on thier name length.
+
+// 13B
+Create a Map that associates farmer name with Farmer object
+
+// 15A
+Given a farmer list. Stream, map and collect so that 
+finally we see Name and Age printed for each farmer.
+		
+//15B Implement applyBonus from yesterdays using stream's groupingBy operation.
+For this purpose write another function applyBonus2
+
+
+20A Explore logging.properties usage in setting the Loggers.
+
+21A Write your own Annotation, a simple one.
+21B Write your own Annotation, which can be applied to Feilds only.
