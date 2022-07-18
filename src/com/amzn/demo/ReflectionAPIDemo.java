@@ -39,8 +39,10 @@ class MyClass {
 
 }
 
+
 public class ReflectionAPIDemo {
 
+	//
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException, NoSuchMethodException, SecurityException, NoSuchFieldException {
 		Class class1 = MyClass.class;
 

@@ -178,8 +178,6 @@ public class RegexDemo {
 		// How many valid IP address are there in the txt below.
 		String sourceText2 = "78.5.23.1 127.0.0.1 192.168.0.11 2.267.1.0";
 
-		System.exit(0);
-
 		// check end of something use $
 		pattern = Pattern.compile("11pm.$");
 		matcher = pattern.matcher(sourceText);

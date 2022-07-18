@@ -140,3 +140,6 @@ For this purpose write another function applyBonus2
 
 
 20A Explore logging.properties usage in setting the Loggers.
+
+21A Write your own Annotation, a simple one.
+21B Write your own Annotation, which can be applied to Feilds only.

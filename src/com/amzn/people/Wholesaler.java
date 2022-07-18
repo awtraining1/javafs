@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 
+@Deprecated
 public class Wholesaler {
 
 	public String name;
