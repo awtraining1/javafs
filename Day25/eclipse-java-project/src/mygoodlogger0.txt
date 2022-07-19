@@ -1,0 +1,2 @@
+Jul 13, 2022 2:40:46 PM com.amzn.demo.LoggingDemo2 main
+INFO: QWERTY
