@@ -45,8 +45,7 @@ public class AddNewFarmer extends HttpServlet {
 				
 				int age=0;
 				if(ageStr!=null)
-				age = Integer.parseInt(ageStr);
-				
+				age = Integer.parseInt(ageStr);				
 				
 				try {
 					psmt.setString(1,nameStr);

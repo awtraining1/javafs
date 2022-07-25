@@ -3,33 +3,26 @@ package comamzn.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ProfileServlet")
-public class ProfileServlet extends HttpServlet {
+//Demo including content from other servlet
+@WebServlet("/A")
+public class A extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	@Override
-	public void init(ServletConfig config) {
-		System.out.println("Inside ProfileServlet. I am getting initiliazed.. ");
-	}
+       
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		
 		PrintWriter pw = response.getWriter();
 		
 		request.getRequestDispatcher("HeaderServlet").include(request, response);
 		
-		pw.write("<center><h1> Here is your profile! </h1></center>");
-		pw.append("<script>alert('I am alert from JavaScript');"
-				+ " document.write('Blah Blah ....');"
-				+ "</script>");
+		pw.append("<br></br>");
+		pw.append("This is content from Servlet A");
+		pw.append("<br></br>");
 		
 		request.getRequestDispatcher("FooterServlet").include(request, response);
 		
@@ -37,8 +30,5 @@ public class ProfileServlet extends HttpServlet {
 		pw.close();
 	}
 
-	@Override
-	public void destroy() {
-		System.out.println("Inside ProfileServlet. I am getting destroyed.. ");
-	}
+
 }
