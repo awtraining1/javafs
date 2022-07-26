@@ -2,6 +2,7 @@ package comamzn.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,11 +22,19 @@ public class HTTPSessionTerminationDemo extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 				
 		HttpSession httpSession = request.getSession(false); // false don't create a new session if none exist
-		
-		
+			
 		if(httpSession!=null) {
+		// check if there is anything in the session object'
+			pw.print("<br/>Following items were found in your session. We will terminate the session.");
+			
+			Enumeration<String> attrNames = httpSession.getAttributeNames();
+			while(attrNames.hasMoreElements()) {
+				String attrName = (String) attrNames.nextElement();
+				pw.print("<br/>"+attrName + "," + httpSession.getAttribute(attrName));
+		};
+			
 		httpSession.invalidate(); // Terminating the http session
-		pw.print("Hey there is a http session "
+		pw.print("<br/>Hey there is a http session "
 				+ "for current interaction with the web app and terminating it");
 		}
 		else
