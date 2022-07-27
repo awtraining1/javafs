@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Harvest of a Framer</title>
+</head>
+<body>
+
+<h3 style="color:purple">Hello Farmer, submit your this years harvest</h3>
+<hr/>
+<BR/>
+
+<form ACTION="HarvestServlet" METHOD="POST">
+<BR/>Enter Farmer Name: <input type="text" name="farmerName" > 
+<BR/><BR/>Enter No of Tomatoes: <input type=text name="noOfTomatoes"> 
+<BR/><BR/>Enter No of Mangoes: <input type=text name="noOfMangoes"> 
+<BR/><BR/>Enter No of Apples: <input type=text name="noOfApples"> 
+
+<BR/><BR/>How do you want to recieve payment notification: 
+<BR/><input type=checkbox name="modeOfNotification" value="SMS"> SMS 
+<BR/><input type=checkbox name="modeOfNotification" value="Email"> Email 
+<BR/><input type=checkbox name="modeOfNotification" value="Phone call"> Phone call
+
+<BR/><BR/><input type="submit" value="Submit My Harvest">
+</form>
+
+</body>
+</html>
