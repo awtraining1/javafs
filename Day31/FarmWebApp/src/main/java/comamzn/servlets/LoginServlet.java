@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = null;
 		if(nameStr.equalsIgnoreCase("saba") && passwordStr.equals("topsecret")) {
 			session = request.getSession(true);
-			session.setAttribute("loggedIn", true);
+			session.setAttribute("loggedIn", "true");
 			//
 			pw.printf("Login Success!! for %s", nameStr);
 		}

@@ -1,0 +1,32 @@
+package comamzn.servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/LogoutServlet")
+public class LogoutServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession session = request.getSession(true);
+		session.invalidate();
+
+		// After session termination, take him back to login page
+		response.sendRedirect("login.html");
+	}
+
+	// If some one wants to logout using a form and http method POST
+	// we simply call the code written in doGet instead of
+	// duplicating it here.
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}
