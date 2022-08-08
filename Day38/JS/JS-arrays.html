@@ -1,0 +1,53 @@
+<html>
+
+<script>
+    var arrOfFruits = new Array();
+    arrOfFruits[0] = "Apple";
+    arrOfFruits[1] = "Mango";
+    arrOfFruits[2] = "Orange";
+    arrOfFruits[3] = "Guava";
+
+    // document.write(arrOfFruits);
+
+    for (var x = 0; x < arrOfFruits.length; x++) {
+        document.write("<li>" + arrOfFruits[x] + "</li>");
+    }
+
+</script>
+
+<script>
+    document.write("<hr/> Initialzing the array at the of decl");
+
+    var arrOfFruitsV1 = ["Apple", "Mango", "Orange", "Guava"];
+
+    // document.write(arrOfFruitsV1);
+
+    for (var x = 0; x < arrOfFruitsV1.length; x++) {
+        document.write("<li>" + arrOfFruitsV1[x] + "</li>");
+    }
+</script>
+
+<script>
+    document.write("<hr/> Adding elements to an variable even without declaring it as array");
+
+    var arrOfFruitsV2 = [];
+
+    arrOfFruitsV2[0] = "Apple";
+    arrOfFruitsV2[1] = "Mango";
+    arrOfFruitsV2[2] = "Orange";
+    arrOfFruitsV2[3] = "Guava";
+
+    for (var x = 0; x < arrOfFruitsV2.length; x++) {
+        document.write("<li>" + arrOfFruitsV2[x] + "</li>");
+    }
+</script>
+
+<script>
+    document.write("<hr/> 38D SOLVED");
+    var arr = ["apple", 5.444, "banana", 1, true, "gouva"];
+    for (var x = 0; x < arr.length; x++) {
+        document.write("<li>" + arr[x] + "</li>");
+    }
+</script>
+
+</html>

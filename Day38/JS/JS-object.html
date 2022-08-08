@@ -1,0 +1,69 @@
+<html>
+
+<script>
+    var str ="hello";
+    var str1 = new String("hello"); // Built-in String object
+    var date1 = new Date(); // Built-in String object
+
+    document.write("<br/> String " + str1);
+    document.write("<br/> Today is " + date1);
+
+    // Creating our own user defined objects
+    document.write("<hr/><br/> Creating our own user defined objects demo"); 
+    
+    function Person(){
+        this.name="Alfred";
+        this.age = 35;
+    };
+
+    var p1 = new Person();
+    
+    document.write("<br/> Person p1 is " + p1);
+    document.write("<br/> Person p1 name is " + p1.name);
+    document.write("<br/> Person p1 age is " + p1.age);
+
+    p1.name = "Bhaskar";// re-assign object's name property
+    document.write("<br/> Person p1 name is " + p1.name);
+
+    p1.salary = 100000; // JS allows adding new properties to AN object 
+    // NOTE: the additional property will NOT get added to the Person function!!
+    document.write("<br/> Person p1 salary is " + p1.salary);
+
+    //
+    var p2 = new Person(); // GOOD
+    document.write("<br/> Person p2 name is " + p2.name);// Alfred
+    document.write("<br/> Person p2 salary is " + p2.salary);//?? null
+
+    // we can add additional proerties anytime using the prototype attr of Person
+    Person.prototype.address = "INDIA";
+
+    var p3 = new Person(); // GOOD
+    document.write("<br/> Person p3 name is " + p3.name);// Alfred
+    document.write("<br/> Person p3 address is " + p3.address);// India
+
+    document.write("<br/> Person p1 address is " + p1.address);// India
+
+</script>
+
+<script>
+//38E
+document.write("<hr/><br/> 38E SOLVED"); 
+function Fruit(){
+    this.name="apple";
+    this.area="kasmir";
+    this.price=200;
+};
+var f1 = new Fruit();
+document.write("<br>" +f1.name +" is in " + f1.area + " price of "+ f1.price  );
+
+var f2 = new Fruit();
+document.write("<br>" +f2.name +" is in " + f2.area + " price of "+ f2.price );
+
+Fruit.prototype.Vitamin="A";
+document.write("<br><br> f1 vitamin "+ f1.Vitamin);
+document.write("<br> f2  vitamin "+f2.Vitamin);
+
+
+</script>
+
+</html>

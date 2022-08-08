@@ -1,0 +1,12 @@
+38A : Write JS code which will switch to print "You eligible to vote" if the 
+user age is > 21 
+
+38B : Write a function that calulates interest of 15%
+     and returns the final amount
+     for a given principal amount
+
+38C : Write a function that prints "Greetings to you on this Independence Day"
+
+38D : Check if you can store diff types of values in an array
+
+38E : Write code so that you can create 2 Fruits with 2 properties

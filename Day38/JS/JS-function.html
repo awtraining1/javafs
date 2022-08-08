@@ -1,0 +1,63 @@
+<html>
+
+<script>
+    /*
+        function function_name(comma separated arg_list) {
+    
+            // return something;
+        }
+    */
+
+    //Defining the function
+    function calculateTax(salary) {
+        var tax = salary * 0.1; // 10% of salary
+        document.write("<br/> Your tax is " + tax);
+    };
+
+    // Invoking the function with a argument value of 5000 for argument salary
+    calculateTax(5000);
+    calculateTax(15000);
+
+    document.write("<hr/>");
+
+    // Function that return value
+    function calculateTax_V2(salary) {
+        var tax = salary * 0.1; // 10% of salary
+        return tax;
+    };
+
+    var tax1 = calculateTax_V2(5000);
+    var tax2 = calculateTax_V2(15000);
+    document.write("<br/> Your tax  as per  calculateTax_V2 " + tax1);
+    document.write("<br/> Your tax  as per  calculateTax_V2 " + tax2);
+
+</script>
+
+// 38B
+<script>
+    document.write("<hr/> 38B SOLVED");
+    //Defining the function
+    function calculateInterest(principal) {
+        var finalAmount = principal + principal * 0.15; //15% of principal
+        return finalAmount;
+
+    };
+
+    //Calling the function
+    var principal = 50000;
+    var final_amount = calculateInterest(principal);
+    document.write("<br/> Your Amount with interest is for principal " + principal +
+        " is " + final_amount);
+</script>
+
+// 38C
+<script>
+    document.write("<hr/> 38C SOLVED");
+    function Greet() {
+        document.write("<br/> Greetings to you on this Independence Day");        
+    }
+    
+    Greet();
+</script>
+
+</html>

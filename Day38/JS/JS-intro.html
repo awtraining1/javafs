@@ -1,0 +1,132 @@
+<html>
+<center>Welcome to Best Farms</center>
+<hr /><br /><br />
+
+<script>
+    // This is single line comment
+    var x = "hello world";
+    var y = 20;
+    var z = new Date();
+
+    document.write("<br/>" + x);
+    document.write("<br/>" + y);
+    document.write("<br/>" + z);
+
+    //Operators Arithmetic, Logical, Shift, Bit wise
+    var y1 = 2;
+    var y2 = 3;
+    y3 = y1 + y2; // 5
+
+    console.log("y3=" + y3);
+
+    todayIsRaining = true; // JS is loosely typed lang. We don't need to write "var"
+    console.log("todayIsRaining=" + todayIsRaining);
+
+    /*
+    This is a multi line
+    comment
+    */
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+
+// alert(x);
+
+</script>
+
+<p>A paragraph in html</p>
+
+<script>
+    var a1 = 9;
+    console.log(a1);
+
+    //Control Flow
+    //For loop
+    document.write("<br/> demo for loop");
+    for (var a2 = 0; a2 < 5; a2++) {
+        document.write("<br/> a2 = " + a2);
+    }
+
+    // While loop
+    document.write("<br/><br/> demo for while loop");
+    var a3 = 0;
+    while (todayIsRaining === true) {
+        document.write("<br/> a3 = " + a3);
+
+        if (a3 === 3) todayIsRaining = false;
+        a3++;
+    }
+
+    // do while
+    document.write("<br/><br/> demo for do while loop");
+    do {
+        document.write("<br/> a3 = " + a3);
+
+        if (a3 === 3) todayIsRaining = false;
+        a3++;
+    } while (a3 < 3)
+
+    // switch
+    document.write("<br/><br/> demo switch");
+    var day = "WEDNESDAY";
+    switch (day) {
+        case "MONDAY":
+            document.write("<br/> today is monday");
+            break;
+        case "TUESDAY":
+            document.write("<br/> today is tuesday");
+            break;
+        case "WEDNESDAY":
+            document.write("<br/> today is wednesday");
+            break;
+        case "THURSDAY":
+            document.write("<br/> today is thursday");
+            break;
+        default:
+            document.write("<br/> today could be Fri/Sat/Sun day");
+    }
+
+// 38A : Write JS code which will switch to print "You eligible to vote" if the 
+// user age is > 21   
+document.write("<br/><br/> demo switch");
+var age = 21; 
+switch(age){
+    case age<21: document.write("not eligible"); 
+    break;
+    case age>=21: document.write("Eligible");
+    break;
+    
+    default: document.write("input valid age");
+};
+
+////
+document.write("<br/><br/> demo2 switch");
+var age1 = 21; 
+switch(age1){
+    case 0: document.write("not eligible"); 
+    break;
+    case 1: document.write("not eligible"); 
+    break;
+    case 2: document.write("not eligible"); 
+    break;
+    ///////.... case 20
+    case 21: document.write("Eligible");
+    ///////.... case 22 to case 100
+    break;
+    
+    default: document.write("input valid age");
+};
+
+document.write("<br/><br/> demo3 switch"); // recommended
+var age2 = 21; 
+switch(age2>20){
+    case true: document.write("Eligible");
+    break;
+    case false: document.write("not eligible"); 
+    break;    
+};
+
+</script>
+
+</html>
