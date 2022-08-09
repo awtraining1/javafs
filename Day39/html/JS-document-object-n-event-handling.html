@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+document object demo
+<br /> document object in JS represents the web page
+
+<p id="para1">This is para 1</p>
+<p id="para2">This is para 2</p>
+
+<img id="img1"
+    src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+    width="200" height="100" onmouseover="f5('on');" onmouseout="f5('off');" />
+
+<ul>
+    <li>Apple</li>
+    <li>Mango</li>
+</ul>
+
+<form>
+    <input type="text" value="100" />
+    <input type="submit" value="submit" />
+</form>
+
+<p>This is para 3</p>
+<p>This is para 4</p>
+
+<br /><br />
+<button onclick="f1();"> Click Me to change first 2 para text! </button>
+<button onclick="f2();"> Click Me to change the picture! </button>
+<button onclick="f3('para1');"> Click Me to para1 text! </button>
+<button onclick="f3('para2');"> Click Me to para2 text! ! </button>
+
+<br /><br /> <button onclick="f4();"> Click to change all p tags' text to Helloworld ! </button>
+
+<!-- any html tag can have event handlers not just buttons-->
+<h3 onclick="f4();"> I am para text, but if you click me, I will change all p text</h3>
+
+<script>
+    function f1() {
+        var p1 = document.getElementById("para1");
+        p1.innerText = " Haha 1...";
+
+        var p2 = document.getElementById("para2");
+        p2.innerText = " Haha 2...";
+    };
+
+    function f2() {
+        var img01 = document.getElementById("img1");
+        img01.src = "https://tinypng.com/images/social/website.jpg";
+    }
+
+    //Solution for 39A
+    function f3(p) {
+
+        if (p === "para1") {
+
+            var p1 = document.getElementById("para1");
+            p1.innerText = "Hahaa...";
+        }
+        else if (p === "para2") {
+
+            var p2 = document.getElementById("para2");
+            p2.innerText = "Hahaa2...";
+        }
+    }
+
+    // change all p tags content
+    function f4() {
+        var pTagArray = document.getElementsByTagName("p");
+
+        for (var n = 0; n < pTagArray.length; n++) {
+            pTagArray[n].innerText = "Hello world";
+            pTagArray[n].style.color = "red";
+            //pTagArray[n].style.border = "solid";
+        }
+    }
+
+    function f5(onoff) {
+        var img01 = document.getElementById("img1");
+        if (onoff === "on") {
+            img01.style.color = "red";
+            img01.style.border = "thick double #32a1ce";
+        } else if (onoff === "off") {
+            img01.style.color = "";
+            img01.style.border = "none";
+        }
+    }
+
+</script>
+
+<!--39A: create two buttons which when clicked will update para1 or para2
+p-tags based on the arg value passed
+to the event handler(write only one function).-->
