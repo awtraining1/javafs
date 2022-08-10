@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<script>
+    var str = new String("Hello World, today is Tuesday");
+
+    var str1 = str.toLowerCase();
+    document.write("<br/><br/> " + str1);
+
+    var strArr = str.split(",");
+    document.write("<br/><br/> length of array  " + strArr.length);
+    document.write("<br/><br/> contents of array  " + strArr);
+
+    //
+    document.write("<br/><br/> str has Tuesday " + str.indexOf("Tuesday"));
+    document.write("<br/><br/> str has Wednesday " + str.indexOf("Wednesday"));
+
+    //substring. end index is included
+    document.write("<br/><br/> str.slice(6,11) = " + str.slice(6, 11));
+
+    document.write("<br/><br/> str.search(\"today\") = " + str.search("today"));
+    document.write("<br/><br/> str.search(\"Wednesday\") = " + str.search("Wednesday"));
+
+
+
+    // Date
+    document.write("<hr/> Date object demo<br/><br/>");
+    var today = new Date();
+    document.write("Today is " + today);
+    document.write("Today is " + today.getDay() + " " + today.getMonth() + " " + today.getFullYear());
+
+    var date1 = new Date(2020, 4, 3);
+    document.write("<br/><br/> date1 is " + date1);
+
+</script>
+
+
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+   // document.write("<br/><br/> "+ dayjs('2019-01-25').format('DD/MMM/YYYY') ); // '25/01/2019'
+</script>
+
+
+
+<script>
+    //window object
+    //document.write("<br/><br/> browser window height is "+ window.screen.height);
+    //document.write("<br/><br/> browser window height is "+ window.location);
+
+    var locStr = window.location.toString();
+    if (locStr.indexOf("login.html") == -1) {
+        //alert("You are not on the login page!")
+    }
+
+    // navigator object
+    document.write("<br/><br/> you are on browser " + navigator.appCodeName);
+    document.write("<br/><br/> you are on browser product " + navigator.product);
+    document.write("<br/><br/> you are on browser appVersion " + navigator.appVersion);
+
+
+    //location
+    document.write("<br/><br/> domain of this webpage is " + location.host);
+
+    if (prompt("want to go to JS-arrays.html?") === "yes")
+        location.href = "../JS-arrays.html";
+
+</script>
+
+</html>
