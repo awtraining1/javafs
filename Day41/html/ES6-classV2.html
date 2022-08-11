@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Object creation with classes and fucntions defined in JS file) </h3>
+</center>
+<hr />
+
+<script src="../js/DomainClasses.js" ></script>
+
+<script>
+    let patient1 = new Patient("Sujata",42, "giddiness");
+    document.write(`<br/> pat1 =  ${patient1} `);
+    document.write(`<br/> pat1 name is  ${patient1.name} `);
+    document.write(`<br/> pat1 name is  ${patient1.ailment} `);
+
+    let doc1 = new Doctor();
+    document.write(`<br/> doc1 =  ${doc1} `);
+
+    let emp1000 = new Employee("Jetty", 23, ["cooking", 'cricket']);
+    document.write(`<br/> emp1000 =  ${emp1000.name} `);
+    document.write(`<br/> emp1000 =  ${emp1000.hobbies} `);
+
+    let frut1 = new Fruit("Mango","yellow",200);
+        document.write(`<br/> frut1 =  ${frut1} `)
+        document.write(`<br/> frut1 name is  ${frut1.name} `);
+        document.write(`<br/> frut1 color is  ${frut1.color} `);
+        document.write(`<br/> frut1 price is  ${frut1.price} `);
+
+</script>
+
+</html>

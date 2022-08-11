@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <center>
+        <h2> Create your awesome Profile here </h2>
+    </center>
+    <script>
+        // validation and  transformation 
+        function f10() {
+            //clear prev error messages
+            document.getElementById("fNError").innerHTML = "";
+            document.getElementById("lastfNError").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+            document.getElementById("qualificationError").innerHTML = "";
+
+            var formHasErrors = false;
+
+            var fN = document.forms['profileForm'].firstName.value;
+            var lastN = document.forms['profileForm'].lastName.value;
+            var pass = document.forms['profileForm'].passwd.value;
+
+            if (fN === null || fN === "" || fN.length <= 4) {
+                document.getElementById("fNError").innerHTML = "first name cannot be less than 4 chars";
+                document.getElementById("firstName").style.background = "yellow";
+                formHasErrors=true;
+            };
+            if (lastN === null || lastN === "" || lastN.length < 3) {
+                document.getElementById("lastfNError").innerHTML = "last name cannot be less than 4 chars";
+                //document.getElementById("lastName").style.color="yellow";
+                formHasErrors=true;
+            };
+            if (pass === null || pass === "" || pass.length <= 4) {
+                document.getElementById("passError").innerHTML = "pass name cannot be less than 4 chars";
+                //document.getElementById("passwd").style.color="red";
+                formHasErrors=true;
+            };
+
+            //process the radio button
+            var qualification = document.forms['profileForm'].highestQual.value;
+            if (qualification === null || qualification === "") {
+                document.getElementById("qualificationError").innerHTML =
+                    "please choose your highest qualification";
+                    formHasErrors=true;
+            };
+
+            // process the checkbox which can have multi values
+            var hobbiesCheckbox = document.forms['profileForm'].hobbies;
+
+            for (var n = 0; n < hobbiesCheckbox.length; n++) {
+                //alert (hobbiesCheckbox[n].value + " : "+ hobbiesCheckbox[n].checked);
+                
+                //For the assume that if the user has Coding hobby, then
+                // no matter what we want submit the form.                
+            }
+
+            // process dropdown list
+
+            //If form has no input errors, submit it to backend
+            if (formHasErrors===false)
+                  document.forms['profileForm'].submit();
+
+            return false;
+        }
+    </script>
+</head>
+
+
+<body>
+    <br /><span style="color:red; background:yellow;" id="fNError"> </span>
+    <br /><span style="color:red; background:rgb(115, 255, 0);" id="lastfNError"> </span>
+    <br /><span style="color:red; background:yellow;" id="passError"> </span>
+    <br /><span style="color:red; background:rgb(115, 255, 0);" id="qualificationError"> </span>
+
+    <form name="profileForm" action="/ProfileServlet" method="POST">
+        <br />Type your First Name : <input id="firstName" type="text" name="firstName" required />
+        <br /><br />Type your Last Name : <input type="text" name="lastName" required />
+
+        <br /><br />Type your Password : <input type="password" name="passwd" required />
+
+        <br /><br /> Choose your highest qualification:
+        UG <input type="radio" value="UG" name="highestQual">
+        PG <input type="radio" value="PG" name="highestQual">
+        Phd <input type="radio" value="Phd" name="highestQual">
+
+        <br /><br /> Choose your hobbies:
+        Singing <input type="checkbox" value="Singing" name="hobbies">
+        Coding <input type="checkbox" value="Coding" name="hobbies">
+        Cooking <input type="checkbox" value="Cooking" name="hobbies">
+        Travelling <input type="checkbox" value="Travelling" name="hobbies">
+
+        <br /><br />Choose your Bike
+        <select name="bike" multiple>
+            <option value="Kawasaki">Kawasaki</option>
+            <option value="Hero">Hero</option>
+            <option value="TVS">TVS</option>
+            <option value="Honda">Honda</option>
+        </select>
+
+        <br /><br /><input type="submit" value="Submit" onclick="f10(); return false;" />
+
+
+
+    </form>
+
+
+</body>
+
+<script>
+
+</script>
+
+</html>

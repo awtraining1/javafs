@@ -1,0 +1,26 @@
+38A : Write JS code which will switch to print "You eligible to vote" if the 
+user age is > 21 
+
+38B : Write a function that calulates interest of 15%
+     and returns the final amount
+     for a given principal amount
+
+38C : Write a function that prints "Greetings to you on this Independence Day"
+
+38D : Check if you can store diff types of values in an array
+
+38E : Write code so that you can create 2 Fruits with 2 properties
+
+39A: create two buttons which when clicked will update para1 or para2 
+ p-tags based on the arg value passed
+ to the event handler(write only one function).
+
+40A: remove the inline event handler for img1 and attach the listener
+dynamically/programatically.
+
+41A PROB Use above function and ... rest and spread
+to calculate sum of 2nd to 4th (6, 7,19)
+
+41B For a Farmer class, write a function that prints
+    // farmer's name and age only.
+    // Use object destructuring in the function args.

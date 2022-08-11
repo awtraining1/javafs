@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo</h3>
+</center>
+<hr />
+
+<script>
+    var x = 10;// x is in GLOBAL scope
+    document.write("<br/> 1 x=" + x);
+
+    function f1() {
+        var y = 24; // local scope or function scope
+
+        document.write("<br/> 2 x=" + x);
+        document.write("<br/> 1 y=" + y);
+
+        {
+            var z = 100; // block scope NOT applicable for var type of decl
+            let z1 = 100; // block scope
+            document.write("<br/>1 z=" + z);
+            document.write("<br/>1 z1=" + z1);
+            document.write("<br/>2 y=" + y);
+        }
+
+        document.write("<br/>2 z=" + z);
+        document.write("<br/>2 z1=" + z1); //ERROR
+
+        document.write("<br/> 3  y=" + y);
+    }
+
+    f1();
+
+        // document.write("<br/> 4  y="+y); ERROR ReferenceError: y is not defined
+</script>
+
+
+<script>
+    document.write("<hr/>var side effect<br/>");
+    function f2() {
+        var n=16;
+         // some 100 lines code
+
+        for(var n=0; n<5 ; n++){
+            document.write("<br/>   n=" + n);
+        };
+
+        // some 100 lines code
+        document.write("<br/> age is =" + n);
+    };
+
+    f2();
+
+    document.write("<hr/>var side effect remedy <br/>");
+    function f3() {
+        let n=16;
+         // some 100 lines code
+
+         for(let n=0; n<5 ; n++){
+            document.write("<br/>   n=" + n);
+        };
+       
+        // some 100 lines code
+        document.write("<br/> age is =" + n); //n=6
+    };
+
+    f3();
+
+</script>
+
+<script>
+    document.write("<hr/>const decl demo <br/>");
+
+    const pi=3.14;
+
+    //pi=10; // TypeError: Assignment to constant variable.
+
+    const str="hello";
+    // str="world"; //TypeError: Assignment to constant variable.
+
+    function Person(){ this.name="Janaka" };
+    const person1 =  new Person();
+    document.write(person1.name)
+    person1.name="Parsuram"; // Error?? GOOD
+    document.write(person1.name);
+
+    // person1 = new Person(); //ERROR
+
+
+    let person2 =  new Person();
+
+    // person1 = person2; // ERRORRRRRRRRRRRRRRRRR
+
+</script>
+
+</html>

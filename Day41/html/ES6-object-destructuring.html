@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Object destructuring) </h3>
+</center>
+<hr />
+
+<script src="../js/DomainClasses.js" ></script>
+
+<script>
+
+    function showPatientDetails( patient ){
+        document.write(`<br/> patient name is  ${patient.name} `);
+    } 
+
+    let patient1 = new Patient("Sujata",42, "giddiness");  
+
+    showPatientDetails(patient1);
+
+    // Modern / ES6 way of writing the above function
+    function showPatientDetailsV2( {name, ailment} ){
+        document.write(`<br/> V2 patient name is  ${name} `);
+        document.write(`<br/> V2 patient ailment is  ${ailment} `);
+    };
+
+    showPatientDetailsV2(patient1);
+
+    // 41B For a Farmer class, write a function that prints
+    // farmer's name and age only.
+    // Use object destructuring in the function args.
+    function showFarmerDetailsV2( {name,age,phone} ){
+        document.write(`<br/> V2 Farmer name is  ${name} `);
+        document.write(`<br/> V2 Farmer age is  ${age} `);        
+        document.write(`<br/> V2 Farmer phone is  ${phone} `);
+    };
+    
+    let Farmer1 = new Farmer("Sham",42, 2345678);  
+    showFarmerDetailsV2(Farmer1);
+
+</script>
+
+</html>

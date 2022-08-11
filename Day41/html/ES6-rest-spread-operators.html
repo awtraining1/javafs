@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Rest operator) </h3>
+</center>
+<hr />
+
+<script>
+    let numArr = [4, 6, 7, 19, 24];
+
+    let subNumArr = [];
+
+    let m = 0;
+
+    for (let n = 2; n < numArr.length; n++, m++) {
+        subNumArr[m] = numArr[n];
+    }
+
+    document.write(`<br/> subNumArr = ${subNumArr} `);
+
+    // Using ...
+    let [a, b, ...subNumArr1] = numArr;
+    document.write(`<br/> subNumArr1 = ${subNumArr1} `);
+
+    //let [a1,b1,...subNumArr1a,c1 ] = numArr; // SyntaxError: Rest element must be last element
+
+    // how do clone an array in JS
+    let [...clonedArr] = numArr;
+    document.write(`<br/> clonedArr =  ${clonedArr} `);
+
+</script>
+
+
+<center>
+    <h3>ES6 Features Demo (Spread operator ...) </h3>
+</center>
+<hr />
+<script>
+    function f1(a1, a2, a3) {
+        return a1 + a2 + a3;
+    };
+
+    let numArr1 = [4, 6, 7, 19, 24];
+
+    let sum = f1(numArr1[0], numArr1[1], numArr1[2]);
+    document.write(`<br/> sum =  ${sum} `);
+
+    let sumES6 = f1(...numArr1);
+    document.write(`<br/> sumES6 =  ${sumES6} `);
+
+    //41A PROB Use above function and ... 
+    // to calculate sum of 2nd to 4th (6, 7,19)
+
+</script>
+
+</html>
