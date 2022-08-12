@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Arrow functions) </h3>
+</center>
+<hr />
+
+<script>
+
+let square = a => a*a;
+let cubic = a => a*a*a;
+let enLang = a => ` answering in english ${a} `;
+let jpLang = a => ` 日本語で答える、 結果= ${a} `;
+
+// x - a number ; f is a function, lang is a function to print in particular lang
+let f2 = (x, f, lang ) => {
+    //// do something before 
+    //return lang(f(x)); // lang(x) + f(x)
+    return lang(f(f(x)));
+};
+
+let result = f2(3,square, enLang);
+
+document.write(`<br/> Calling f2 result=  ${ result } `);
+
+let result2 = f2(3,cubic, jpLang);
+document.write(`<br/> Calling f2 result2=  ${ result2 } `);
+    
+// 42A Given salary, deductions of a person write a function that returns
+// tax before deductions and also capable of returning tax after deductions
+// salary = 600000 10% 60000  deduction 150000
+let taxBefDeduction
+let taxAfterDeduction
+
+// let computeTax(salary, f) => ///
+
+</script>
+
+
+
+</html>

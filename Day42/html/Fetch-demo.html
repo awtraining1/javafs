@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>Fetch Request demo</h3>
+</center>
+<hr />
+<br /><br />
+<div id="score">INITIAL DEFAULT CONTENT</div>
+
+<script>
+    async function f1() {
+        let url = "https://gist.githubusercontent.com/rominirani/8235702/raw/a50f7c449c41b6dc8eb87d8d393eeff62121b392/employees.json"
+
+        await fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                data.Employees.forEach(item => document.write(`<li>${item.firstName}, ${item.emailAddress} </li>`));
+                data.Employees.forEach(item => document.write(`<li>${item.phoneNumber}</li>`));
+            }
+            )
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+    };
+
+    f1();
+
+</script>
+
+</html>

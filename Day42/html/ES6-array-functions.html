@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Array functions) </h3>
+</center>
+<hr />
+
+<script>
+    let arr = ["Singing", "Dancing", "Cooking", "Travelling"];
+
+    for (let n = 0; n < arr.length; n++) {
+        document.write(`<br/> ${arr[n]}`);
+    };
+
+    document.write(`<hr/>`);
+
+    arr.forEach(item => document.write(`<br/> ${item}`));
+
+    document.write(`<hr/> forEach that uses a lambda function defined earlier`);
+    let f1 = a => document.write(`<li> ${a.toUpperCase()} </li>`);
+
+    arr.forEach(item => f1(item));
+
+    document.write(`<hr/> map works similarly that uses a lambda function defined earlier`);
+    arr.map(item => f1(item));
+
+    document.write(`<hr/> Filter function`);
+
+
+    let arrFiltered = arr.filter(item => item.length < 8);
+    arrFiltered.forEach(item => f1(item));
+
+    let products = [
+        { name: "samsung mobile 3552", price: 34562 },
+        { name: "nokia mobile 355tt2", price: 12000 },
+        { name: "Mi mobile 3454hh", price: 90000 },
+        { name: "Motorala mobile 3421", price: 34599 }
+    ];
+
+    //42B Prob print names of those mobile phones whose price is n/w 30k and 40k
+    document.write(`<hr/> Filter function 42B Prob`);
+    let productsFiltered =
+        products
+        .filter(item => item.price >= 30000)
+        .filter(item => item.price <= 40000);
+
+    productsFiltered.forEach(item => f1(item.name));
+
+    // filling arrays with default values;
+    let arrHello = new Array(10);
+    arrHello.fill("hello", 0, 7);
+    arrHello.fill("world", 7, 10);
+    arrHello.forEach(item => document.write(`<br/> ${item}`));
+
+</script>
+
+</html>

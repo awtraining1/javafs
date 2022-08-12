@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<center>
+    <h3>ES6 Features Demo (Arrow functions) </h3>
+</center>
+<hr />
+
+<script>
+/*
+function f1(a,b ) {
+
+return a+b;
+};
+*/
+
+let f1 = (a, b) => {
+  return a+b;  
+};
+
+document.write(`<br/> Calling f1  ${ f1(2,3) } `);
+
+// if body is single line
+let f2 = (a, b) =>   a+b; 
+
+document.write(`<br/> Calling f2  ${ f2(2,3) } `);
+
+//if only one arg
+let f3 = a =>   a*2; 
+document.write(`<br/> Calling f3  ${ f3(2) } `);
+
+</script>
+
+
+</html>
