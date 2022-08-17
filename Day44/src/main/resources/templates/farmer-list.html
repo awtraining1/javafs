@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <!-- <ul th:each="farmer : ${farmerList}">
+        <li class="align-middle" th:text="${farmer.name}"></li>
+    </ul> -->
+    List of Farmers
+    <table border=1>
+        <tr>            
+            <th> Name</th>
+            <th> Age</th>
+            <th> Years of Experience</th>
+        </tr>
+        <tr th:each="farmer : ${farmerList}">
+            <td class="align-middle" th:text="${farmer.name}"></td>
+            <td class="align-middle" th:text="${farmer.age}"></td>
+            <td class="align-middle" th:text="${farmer.yearsOfExperience}"></td>
+        </tr>
+    </table>
+
+</html>
