@@ -1,0 +1,32 @@
+Notes.txt
+
+Day 49
+------
+Quick Recap
+
+JPA - persisting our Java object
+
+All
+id
+
+findByNameOrAge(String name, int age)
+
+Day 50
+-------
+Quick Recap of D49
+Configuration application.properties
+
+@PropertySource("classpath:company.properties")
+@ConfigurationP
+p c ABC{
+    @Value("${company.url}")
+   String urlCompany;
+
+   pv abc(){
+
+       return urlCompany;
+   }
+
+}
+
+Profiles
