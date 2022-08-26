@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<center>Login to Best Farms
+
+<form th:action="@{/login}" method="POST" >
+
+	<li th:if="${!#strings.isEmpty(errorMessage)}" th:text="${errorMessage}" />
+	<li th:if="${!#strings.isEmpty(logoutMessage)}" th:text="${logoutMessage}" />
+
+		</br> User Name : <input
+		type="text" name="username" placeholder="UserName"> 
+		</br> Password <input
+		type="password" name="password" placeholder="Password"> 
+		</br> <input type="submit" value="Login"></form>
+</center>
+
+</html>
