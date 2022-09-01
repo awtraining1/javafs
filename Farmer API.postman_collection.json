@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "fb3ffff6-c909-48fd-a075-d8657201e2ad",
+		"name": "Farmer API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Farmer (JPA)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jpa/farmers/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jpa",
+						"farmers",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD New Farmer (JPA)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Rajesh01",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "55",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "asasasa@asasasa.com",
+							"type": "default"
+						},
+						{
+							"key": "yearsOfExperience",
+							"value": "34",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/jpa/farmers/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jpa",
+						"farmers",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Farmer By Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Rajesh02",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/jpa/farmers/delete-by-name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jpa",
+						"farmers",
+						"delete-by-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Farmer By Age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Rajesh02",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/jpa/farmers/delete-by-name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jpa",
+						"farmers",
+						"delete-by-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Farmer API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jpa/farmers/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jpa",
+						"farmers",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Github Async Method",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Farmer by Email",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

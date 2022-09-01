@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+
+Hello <span sec:authentication="name"></span>
+<br /><br />
+ You are in the following roles:
+    <div sec:authentication="principal.authorities"></div>
+   
+ <br /><br /> 
+ This is a message for ALL
+ <br /><br /> 
+ 
+ <div sec:authorize="hasRole('ROLE_USER')" >
+ You will see this message only if you are in  USER role
+ </div>
+ 
+<br /><br /> 
+
+<div sec:authorize="hasRole('ROLE_EMPLOYEE')" >
+  You will see this message if you are in EMPLOYEE role
+<br/> Our employee strength is 10500 people.
+<br/> Our secret product ingredeient in Cocacola is Z!@#.
+ </div>
+ 
+ <div sec:authorize="hasRole('ROLE_ADMIN')" >
+  You will see this message if you are in ADMIN role
+<br/> Admin login secret OTP for today is ~!@#
+</div>
+
+ <br /><br /><br /><br /><a href="http://localhost:8080/logout">    LOGOUT    V2</a>
+
+
+</html>

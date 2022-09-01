@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+Farm life is great!
+<br/>
+<img src="https://i.pinimg.com/originals/e7/5b/9d/e75b9df17cc2d4d7482a104d5ba8c813.jpg" 
+width="200" height="150" />
+
+<!-- <br/>Farmer of the day: <h4 th:text='${farmerName}' /> -->
+<br/>Farmer of the day: 
+<h4 th:text="'name ' + ${farmer.name} + ', age ' + ${farmer.age}" />
+
+<img src="https://otbsalessolutions.com/wp-content/uploads/2021/08/Farmer-standing-in-field.jpg" 
+width="80" height="80"
+
+</html>
